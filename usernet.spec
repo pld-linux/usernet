@@ -7,8 +7,8 @@ License:	GPL
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	49bd462e783ee274b9ec67a8c5c45dd6
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	initscripts >= 3.20
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The usernet utility provides a graphical interface for manipulating
@@ -30,11 +30,14 @@ wszystkie.
 %setup -q
 
 %build
-%{__make} VERSION=%{version}
+%{__make} \
+	VERSION=%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install BR=$RPM_BUILD_ROOT VERSION=%{version}
+%{__make} install \
+	BR=$RPM_BUILD_ROOT \
+	VERSION=%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
