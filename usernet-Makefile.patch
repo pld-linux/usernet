@@ -1,0 +1,20 @@
+--- usernet-1.0.9/Makefile.orig	2005-02-24 18:47:15.000000000 +0100
++++ usernet-1.0.9/Makefile	2005-02-24 18:48:42.000000000 +0100
+@@ -9,7 +9,7 @@
+ 
+ SHARE=$(BR)/usr/share/usernet/$(VERSION)
+ BIN=$(BR)/usr/bin
+-MAN=$(BR)/usr/man/man1
++MAN=$(BR)/usr/share/man/man1
+ WMCONFIG=$(BR)/etc/X11/wmconfig
+ 
+ all: usernetrc usernet
+@@ -25,8 +25,6 @@
+ 
+ install: usernet
+ 	mkdir -p $(SHARE) $(BIN) $(MAN) $(WMCONFIG)
+-	chown root.root $(SHARE)
+-	chmod 755 $(SHARE)
+ 	install -m 644 usernetrc $(SHARE)
+ 	install -m 644 net.xpm $(SHARE)
+ 	install -m 644 modem.xpm $(SHARE)
