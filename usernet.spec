@@ -1,12 +1,14 @@
-Summary:	A graphical utility for controlling network interfaces.
+Summary:	A graphical utility for controlling network interfaces
+Summary(pl):	Graficzne narzêdzie do kontroli interfejsów sieciowych
 Name:		usernet
 Version:	1.0.9
 Release:	2
 License:	GPL
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
+Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Source0:	usernet-%{PACKAGE_VERSION}.tar.gz
 Requires:	initscripts >= 3.20
 
 %description
@@ -18,6 +20,13 @@ user-controllable. The superuser can control all interfaces.
 Install the usernet package if you'd like to provide a graphical
 utility for manipulating network interfaces.
 
+%description -l pl
+Narzêdzie usernet daje graficzny inferfejs do manipulowania
+interfejsami sieciowymi (podnoszenia, wy³±czania, sprawdzania
+statusu). U¿ytkownicy mog± manipulowaæ tylko interfejsami
+kontrolowanymi przez u¿ytkowników. Administator mo¿e kontrolowaæ
+wszystkie.
+
 %prep
 %setup -q
 
@@ -27,8 +36,6 @@ utility for manipulating network interfaces.
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install BR=$RPM_BUILD_ROOT VERSION=%{version}
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
