@@ -4,7 +4,7 @@ Version: 1.0.9
 Release: 2
 Copyright: GPL
 Group: Applications/System
-BuildRoot: /var/tmp/usernet-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Source: usernet-%{PACKAGE_VERSION}.tar.gz
 Requires: initscripts >= 3.20
 
