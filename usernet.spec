@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	49bd462e783ee274b9ec67a8c5c45dd6
+Patch0:		%{name}-Makefile.patch
 Requires:	initscripts >= 3.20
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,6 +29,7 @@ wszystkie.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
