@@ -22,11 +22,11 @@ utility for manipulating network interfaces.
 %setup -q
 
 %build
-make VERSION=%{version}
+%{__make} VERSION=%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install BR=$RPM_BUILD_ROOT VERSION=%{version}
+%{__make} install BR=$RPM_BUILD_ROOT VERSION=%{version}
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
