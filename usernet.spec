@@ -47,6 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/usernet
+%dir %{_datadir}/usernet
 %{_datadir}/usernet/%{version}
 %{_mandir}/man1/*
 %{_sysconfdir}/X11/wmconfig/usernet
