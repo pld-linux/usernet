@@ -33,10 +33,13 @@ wszystkie.
 
 %build
 %{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -DVERSION=\"$(VERSION)\" `gtk-config --cflags`" \
 	VERSION=%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	BR=$RPM_BUILD_ROOT \
 	VERSION=%{version}
