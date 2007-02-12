@@ -1,5 +1,5 @@
 Summary:	A graphical utility for controlling network interfaces
-Summary(pl):	Graficzne narzêdzie do kontroli interfejsów sieciowych
+Summary(pl.UTF-8):   Graficzne narzÄ™dzie do kontroli interfejsÃ³w sieciowych
 Name:		usernet
 Version:	1.0.9
 Release:	2
@@ -20,11 +20,11 @@ user-controllable. The superuser can control all interfaces.
 Install the usernet package if you'd like to provide a graphical
 utility for manipulating network interfaces.
 
-%description -l pl
-Narzêdzie usernet daje graficzny inferfejs do manipulowania
-interfejsami sieciowymi (podnoszenia, wy³±czania, sprawdzania
-statusu). U¿ytkownicy mog± manipulowaæ tylko interfejsami
-kontrolowanymi przez u¿ytkowników. Administator mo¿e kontrolowaæ
+%description -l pl.UTF-8
+NarzÄ™dzie usernet daje graficzny inferfejs do manipulowania
+interfejsami sieciowymi (podnoszenia, wyÅ‚Ä…czania, sprawdzania
+statusu). UÅ¼ytkownicy mogÄ… manipulowaÄ‡ tylko interfejsami
+kontrolowanymi przez uÅ¼ytkownikÃ³w. Administator moÅ¼e kontrolowaÄ‡
 wszystkie.
 
 %prep
