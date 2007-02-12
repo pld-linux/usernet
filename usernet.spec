@@ -1,5 +1,5 @@
 Summary:	A graphical utility for controlling network interfaces
-Summary(pl.UTF-8):   Graficzne narzędzie do kontroli interfejsów sieciowych
+Summary(pl.UTF-8):	Graficzne narzędzie do kontroli interfejsów sieciowych
 Name:		usernet
 Version:	1.0.9
 Release:	2
